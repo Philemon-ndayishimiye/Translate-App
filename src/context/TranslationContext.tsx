@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect} from "react";
-import i18 from "../i18/i18"; // your i18next instance
+import { createContext } from "react";
+import { useTranslation } from "react-i18next";
 
 interface TransCont {
   t: (key: string, options?: Record<string, any>) => string;
@@ -14,23 +14,15 @@ interface Child {
 export const TranslateContext = createContext<TransCont | null>(null);
 
 export const TranslationProvider = ({ children }: Child) => {
-  const [lang, setLang] = useState(i18.language);
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
-    i18.changeLanguage(lng); // change language in i18next
-    setLang(lng); // update state to trigger re-render
+    i18n.changeLanguage(lng); // let i18next handle the change
   };
-
-  // listen to i18next language changes (optional)
-  useEffect(() => {
-    const handleChange = (lng: string) => setLang(lng);
-    i18.on("languageChanged", handleChange);
-    return () => i18.off("languageChanged", handleChange);
-  }, []);
 
   return (
     <TranslateContext.Provider
-      value={{ t: i18.t.bind(i18), lng: lang, changeLanguage }}
+      value={{ t, lng: i18n.language, changeLanguage }}
     >
       {children}
     </TranslateContext.Provider>

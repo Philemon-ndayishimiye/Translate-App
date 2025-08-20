@@ -1,0 +1,32 @@
+{
+  "welcome": "Welcome, {{name}}!",
+
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "items": "You have {{count}} item",
+    "items_plural": "You have {{count}} items",
+    "list": ["Apples", "Bananas", "Cherries"]
+  },
+
+  "auth": {
+    "login": "Log In",
+    "logout": "Log Out",
+    "errors": {
+      "invalid": "Invalid username or password",
+      "locked": "Your account is locked"
+    }
+  },
+
+  "profile": {
+    "details": {
+      "name": "Name",
+      "email": "Email"
+    },
+    "hobbies": [
+      { "id": 1, "label": "Reading" },
+      { "id": 2, "label": "Traveling" },
+      { "id": 3, "label": "Cooking" }
+    ]
+  }
+}

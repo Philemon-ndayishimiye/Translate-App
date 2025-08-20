@@ -1,0 +1,32 @@
+{
+  "welcome": "Bienvenue, {{name}} !",
+
+  "cart": {
+    "title": "Votre Panier",
+    "empty": "Votre panier est vide",
+    "items": "Vous avez {{count}} article",
+    "items_plural": "Vous avez {{count}} articles",
+    "list": ["Pommes", "Bananes", "Cerises"]
+  },
+
+  "auth": {
+    "login": "Se connecter",
+    "logout": "Se déconnecter",
+    "errors": {
+      "invalid": "Nom d'utilisateur ou mot de passe invalide",
+      "locked": "Votre compte est verrouillé"
+    }
+  },
+
+  "profile": {
+    "details": {
+      "name": "Nom",
+      "email": "E-mail"
+    },
+    "hobbies": [
+      { "id": 1, "label": "Lecture" },
+      { "id": 2, "label": "Voyager" },
+      { "id": 3, "label": "Cuisine" }
+    ]
+  }
+}

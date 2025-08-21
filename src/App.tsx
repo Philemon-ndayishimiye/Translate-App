@@ -3,7 +3,7 @@ import Navigation from "./component/Navigation";
 function App() {
   return (
     <div>
-      <Navigation />
+      <h1>hello</h1>
     </div>
   );
 }
